@@ -371,18 +371,18 @@
 % \changes{v1.7c}{1992/04/01}{Expurgated ltugboat.sty from driver.}
 %    \begin{macrocode}
 %<*driver>
-\documentclass{ltxdoc}
+\documentclass[11pt]{ltxdoc}
+
 \usepackage[T1]{fontenc}
-\usepackage{xspace}          
+\usepackage{xspace}      
 \usepackage[colorlinks,allcolors=black]{hyperref}
-\OnlyDescription
 
 \EnableCrossrefs
  %\DisableCrossrefs     % Say \DisableCrossrefs if index is ready
 \CodelineIndex
 \RecordChanges          % Gather update information
 \SetupDoc{reportchangedates}
- %\OnlyDescription      % comment out for implementation details
+\OnlyDescription      % comment out for implementation details
 \setlength\hfuzz{15pt}  % don't show so many
 \hbadness=7000          % over- and underfull box warnings
 \begin{document}
@@ -1335,15 +1335,15 @@
 % declarations:
 %\begin{verbatim}
 % \NewDocElement[macrolike = true ,
-%                 idxtype   = ,
-%                 idxgroup  = ,
-%                 printtype =
+%                idxtype   = ,
+%                idxgroup  = ,
+%                printtype =
 %                ]{Macro}{macro}
 %
 % \NewDocElement[macrolike = false ,
-%                 idxtype   = env.  ,
-%                 idxgroup  = environments ,
-%                 printtype = \textit{env.}
+%                idxtype   = env.  ,
+%                idxgroup  = environments ,
+%                printtype = \textit{env.}
 %                ]{Env}{environment}
 %\end{verbatim}
 %
@@ -1355,10 +1355,10 @@
 % all of them under the heading ``\LaTeX{} commands'' (note the use of \cs{actualchar}):
 %\begin{verbatim}
 %\RenewDocElement[macrolike = true ,
-%                toplevel  = false,
-%                idxtype   = ,
-%                idxgroup  = LaTeX comands\actualchar\LaTeX{} commands ,
-%                printtype =
+%                 toplevel  = false,
+%                 idxtype   = ,
+%                 idxgroup  = LaTeX comands\actualchar\LaTeX{} commands ,
+%                 printtype =
 %               ]{Macro}{macro}
 %\end{verbatim}
 %
@@ -1366,10 +1366,10 @@
 % and group them as well:
 %\begin{verbatim}
 %\RenewDocElement[macrolike = false ,
-%                toplevel  = false,
-%                idxtype   = env.  ,
-%                idxgroup  = Package environments,
-%                printtype = \textit{env.}
+%                 toplevel  = false,
+%                 idxtype   = env.  ,
+%                 idxgroup  = Package environments,
+%                 printtype = \textit{env.}
 %               ]{Env}{environment}
 %\end{verbatim}
 %
@@ -1378,30 +1378,30 @@
 % ``Package commands'', we use \texttt{InterfaceMacro} for them:
 %\begin{verbatim}
 %\NewDocElement[macrolike = true ,
-%                toplevel  = false,
-%                idxtype   = ,
-%                idxgroup  = Package commands,
-%                printtype =
+%               toplevel  = false,
+%               idxtype   = ,
+%               idxgroup  = Package commands,
+%               printtype =
 %               ]{InterfaceMacro}{imacro}
 %\end{verbatim}
 %
 % And since we also have a few obsolete interfaces we add yet another category:
 %\begin{verbatim}
 %\NewDocElement[macrolike = true ,
-%                toplevel  = false,
-%                idxtype   = ,
-%                idxgroup  = Package commands (obsolete),
-%                printtype =
+%               toplevel  = false,
+%               idxtype   = ,
+%               idxgroup  = Package commands (obsolete),
+%               printtype =
 %               ]{ObsoleteInterfaceMacro}{omacro}
 %\end{verbatim}
 %
 % Another type of category are the package keys:
 %\begin{verbatim}
 %\NewDocElement[macrolike = false ,
-%                toplevel  = false,
-%                idxtype   = key  ,
-%                idxgroup  = Package keys ,
-%                printtype = \textit{key}
+%               toplevel  = false,
+%               idxtype   = key  ,
+%               idxgroup  = Package keys ,
+%               printtype = \textit{key}
 %               ]{Key}{key} 
 %\end{verbatim}
 %
@@ -1410,31 +1410,31 @@
 % length registers:
 %\begin{verbatim}
 %\NewDocElement[macrolike = true ,
-%                toplevel  = false,
-%                idxtype   =  counter  ,
-%                idxgroup  = TeX counters\actualchar \protect\TeX{} counters ,
-%                printtype = \textit{counter}
+%               toplevel  = false,
+%               idxtype   =  counter  ,
+%               idxgroup  = TeX counters\actualchar \protect\TeX{} counters ,
+%               printtype = \textit{counter}
 %               ]{TeXCounter}{tcounter}
 %
 %\NewDocElement[macrolike = false ,
-%                toplevel  = false,
-%                idxtype   =  counter  ,
-%                idxgroup  = LaTeX counters\actualchar \LaTeX{} counters ,
-%                printtype = \textit{counter}
+%               toplevel  = false,
+%               idxtype   =  counter  ,
+%               idxgroup  = LaTeX counters\actualchar \LaTeX{} counters ,
+%               printtype = \textit{counter}
 %               ]{LaTeXCounter}{lcounter}
 %
 %\NewDocElement[macrolike = true ,
-%                toplevel  = false,
-%                idxtype   =  skip  ,
-%                idxgroup  = LaTeX length\actualchar \LaTeX{} length (skip) ,
-%                printtype = \textit{skip}
+%               toplevel  = false,
+%               idxtype   =  skip  ,
+%               idxgroup  = LaTeX length\actualchar \LaTeX{} length (skip) ,
+%               printtype = \textit{skip}
 %               ]{LaTeXSkip}{lskip}
 %
 %\NewDocElement[macrolike = true ,
-%                toplevel  = false,
-%                idxtype   =  dimen  ,
-%                idxgroup  = LaTeX length\actualchar \LaTeX{} length (dimen) ,
-%                printtype = \textit{dimen}
+%               toplevel  = false,
+%               idxtype   =  dimen  ,
+%               idxgroup  = LaTeX length\actualchar \LaTeX{} length (dimen) ,
+%               printtype = \textit{dimen}
 %               ]{LaTeXDimen}{ldimen}
 %
 %\end{verbatim}
@@ -1836,7 +1836,6 @@
 %  \end{thebibliography}
 %
 %  \addtocontents{toc}{\protect\end{multicols}}
-%
 %  \PrintIndex
 %
 % } ^^A end \MaybeStop
