@@ -165,8 +165,6 @@
 %    batch files to say \verb|\def\batchfile{...}|.
 % \end{abstract}
 %
-% \tableofcontents
-%
 % \section{Introduction}
 %
 % \subsection{Why the \ds{} program?} When Frank Mittelbach created
@@ -940,7 +938,6 @@
 %\MaybeStop{%
 %^^A \section{Conclusion}
 %  \PrintIndex
-%  \PrintChanges
 %^^A \makesignature
 % }
 %
@@ -987,13 +984,16 @@
 %    Otherwise we process the following lines which will result in
 %    formatting the documentation.
 %    \begin{macrocode}
- \documentclass[nohyperref,11pt]{ltxdoc}
+ \documentclass[12pt,nohyperref]{ltxdoc}
     \EnableCrossrefs
  % \DisableCrossrefs
  % use \DisableCrossrefs if the
  % index is ready
+ \setcounter{IndexColumns}{2}
+ \setlength{\IndexMin}{200pt}
  \RecordChanges
- % \OnlyDescription
+ \CodelineIndex
+ \OnlyDescription
  \typeout{Expect some Under- and overfull boxes}
  \begin{document}
    \DocInput{docstrip.dtx}
