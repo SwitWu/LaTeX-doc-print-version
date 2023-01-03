@@ -44,6 +44,7 @@
 %<*driver>
 \documentclass[full,11pt]{l3doc}
 \hypersetup{colorlinks=false}
+\OnlyDescription
 \usepackage{amstext}
 \begin{document}
   \DocInput{\jobname.dtx}
@@ -651,7 +652,7 @@
 %     \cs{IfNoValueF} \Arg{argument} \Arg{false code}
 %   \end{syntax}
 %   The \cs{IfNoValue(TF)} tests are used to check if \meta{argument} (|#1|,
-%   |#2|, \emph{etc.}) is the special |-NoValue-| marker For example
+%   |#2|, \emph{etc.}) is the special |-NoValue-| marker. For example
 %   \begin{verbatim}
 %     \NewDocumentCommand \foo { o m }
 %       {
